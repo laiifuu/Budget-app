@@ -22,7 +22,7 @@ class EntitiesController < ApplicationController
   def create
     @entity = Entity.new(entity_params)
     @expense = Expense.create(entity_id: @entity.id, group_id: expense_params)
-    
+
     respond_to do |format|
       if @entity.save
         format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
