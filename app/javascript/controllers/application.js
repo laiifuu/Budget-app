@@ -7,3 +7,6 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+import { Turbo } from "@hotwired/turbo-rails"
+Turbo.session.drive = false
