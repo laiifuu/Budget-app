@@ -18,15 +18,28 @@
 
   <div>
     <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <%= form.text_field :icon, class: 'icon-input'  %>
+    <span class="select-icon">Select an Icon</span>
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <%= form.hidden_field :user_id, value: current_user.id  %>
   </div>
+ 
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create Group"%>
   </div>
 <% end %>
+
+
+<div class="icon-picker hidden"> 
+  <h1>Pick an Icon</h1>
+  <span class="close-icon-picker-btn">Close</span>
+  <ul class="icons-list">
+    <li class="icon"><i class="fa-solid fa-utensils"></i></li>
+    <li class="icon"><i class="fa-solid fa-cart-shopping-fast"></i></li>
+    <li class="icon"><i class="fa-solid fa-house"></i></li>
+    <li class="icon"><i class="fa-solid fa-phone"></i></li>
+  </ul>
+</div>

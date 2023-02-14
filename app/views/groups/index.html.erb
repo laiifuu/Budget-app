@@ -1,14 +1,22 @@
+<section class="groups-section">
 <p style="color: green"><%= notice %></p>
 
 <h1>Groups</h1>
 
-<div id="groups">
+  <ul class="groups-lis">
   <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
+    <li class="group-item">
+      <span><i class="<%= group.icon %>"></i></span>
+      <p> <%= group.name %> </p>
+      <p> <%= group.total_amount %> </p>
+      <p>
+        <%= link_to "Show this group", group_path(group.id) %>
+      </p>
+    </li>
   <% end %>
-</div>
+  </ul>
+
 
 <%= link_to "New group", new_group_path %>
+
+</section>
