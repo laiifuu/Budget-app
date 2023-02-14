@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :expenses
   resources :entities
-  resources :groups
+  resources :groups, only: [:index, :show, :new, :create, :destroy] 
+  resources :expenses
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
   root "application#index"
 end
