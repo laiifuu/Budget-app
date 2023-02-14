@@ -1,10 +1,26 @@
+<section class="expenses-section">
+
 <p style="color: green"><%= notice %></p>
+<%= link_to "Back to groups", groups_path %>
 
-
-<%= render @entities %>
+<div> 
+  <span>Total amount: </span>
+  <span> <%= @group.total_amount %></span>
+</div>
 
 <div>
-  <%= link_to "Back to groups", groups_path %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
+  <ul class="transactions-list">
+    <% @entities.each do  |entity| %>
+      <li class="transaction-item">
+        <span> <%= entity.name %> </span>
+        <span> <%= entity.amount %> $ </span>
+        <span> <%= entity.created_at %> </span>
+      </li>
+    <% end %>
+  </ul>
 </div>
+
+<%= button_to "Add Transaction", new_entity_path, method: :get%>
+
+
+</section>
