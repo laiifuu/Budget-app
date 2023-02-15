@@ -14,7 +14,7 @@
     <li class="group-item">
       <span><i class="<%= group.icon %> fa-3x"></i></span>
       <p> <%= group.name %> </p>
-      <p> <%= group.total_amount %> </p>
+      <p> $<%= group.total_amount %></p>
       <p>
         <%= link_to "Show", group_path(group.id), class: "show-button" %>
       </p>
@@ -22,6 +22,6 @@
   <% end %>
   </ul>
 
-<%= link_to "New group", new_group_path, class: "new-group" %>
+<%= link_to "New Category", new_group_path, class: "new-group" %>
 
 </section>

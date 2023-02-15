@@ -70,6 +70,11 @@ a{
   color: inherit;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 /* splash screen styling */
 .splash-screen {
@@ -105,14 +110,14 @@ a{
 
 /* LOGIN FORM */
 
-.login-section, .signup-section, .groups-section, .create-category-section {
+.login-section, .signup-section, .groups-section, .create-category-section, .expenses-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 
-.login-button, .signup-button, .new-group, .create-group {
+.login-button, .signup-button, .new-group, .create-group, .new-entity {
   margin-top: 20px;
   background-color: var(--secondary-color);
   color: white;
@@ -162,7 +167,7 @@ input {
 
 /* groups page */ 
 
-.group-item {
+.group-item, .transaction-item {
   margin: 20px;
   display: flex;
   justify-content: space-between;
@@ -171,8 +176,9 @@ input {
   background-color: white;
 }
 
-.group-item > * {
+.group-item > *, .transaction-item > * {
   flex: 1;
+  text-align: center;
 }
 
 .new-group {
@@ -248,7 +254,19 @@ input {
   flex: 1;
 }
 
+.total-amount-header {
+  text-align: end;
+}
 
+.new-entity {
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.expenses-section > form{
+  padding: 20px;
+}
 
 .hidden {
   display: none;

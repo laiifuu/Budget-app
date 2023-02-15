@@ -1,12 +1,13 @@
 <section class="expenses-section">
 
-<p style="color: green"><%= notice %></p>
-<%= link_to "Back to groups", groups_path %>
+<header class="header">
+<%= link_to "BACK", groups_path %>
+  <h2><%= @group.name %></h2>
+  <span class="total-amount-header"> $<%= @group.total_amount %></span>
+</header>
 
-<div> 
-  <span>Total amount: </span>
-  <span> <%= @group.total_amount %></span>
-</div>
+<p style="color: green"><%= notice %></p>
+
 
 <div>
   <ul class="transactions-list">
@@ -14,13 +15,13 @@
       <li class="transaction-item">
         <span> <%= entity.name %> </span>
         <span> <%= entity.amount %> $ </span>
-        <span> <%= entity.created_at %> </span>
+        <span> <%= entity.created_at.strftime("%d %b %y") %> </span>
       </li>
     <% end %>
   </ul>
 </div>
 
-<%= button_to "Add Transaction", new_entity_path, method: :get%>
+<%= button_to "Add Transaction", new_entity_path, method: :get, class: "new-entity" %>
 
 
 </section>
