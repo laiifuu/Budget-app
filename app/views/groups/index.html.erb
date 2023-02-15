@@ -1,22 +1,27 @@
 <section class="groups-section">
+
+<header class="header">
+  <h2>Categories</h2>
+</header>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Groups</h1>
+
+
 
   <ul class="groups-lis">
   <% @groups.each do |group| %>
     <li class="group-item">
-      <span><i class="<%= group.icon %>"></i></span>
+      <span><i class="<%= group.icon %> fa-3x"></i></span>
       <p> <%= group.name %> </p>
       <p> <%= group.total_amount %> </p>
       <p>
-        <%= link_to "Show this group", group_path(group.id) %>
+        <%= link_to "Show", group_path(group.id), class: "show-button" %>
       </p>
     </li>
   <% end %>
   </ul>
 
-
-<%= link_to "New group", new_group_path %>
+<%= link_to "New group", new_group_path, class: "new-group" %>
 
 </section>
