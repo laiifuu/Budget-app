@@ -6,7 +6,7 @@ import "controllers"
 
 let openPopupBtn = document.querySelector('.select-icon');
 openPopupBtn.addEventListener('click', (e) => {
-  let popupSection = document.querySelector('.icon-picker')
+  let popupSection = document.querySelector('.icon-picker-container')
   if (popupSection.classList.contains('hidden')){
     popupSection.classList.remove('hidden');
   }
@@ -14,7 +14,7 @@ openPopupBtn.addEventListener('click', (e) => {
 
 let closePopupBtn = document.querySelector('.close-icon-picker-btn');
 closePopupBtn.addEventListener('click', (e) => {
-  let popupSection = document.querySelector('.icon-picker')
+  let popupSection = document.querySelector('.icon-picker-container')
   if (!popupSection.classList.contains('hidden')){
     popupSection.classList.add('hidden');
   }
@@ -26,7 +26,7 @@ icons.forEach((icon) => {
     let iconInput = document.querySelector('.icon-input');
     let iconElement = icon.querySelector('i');
     iconInput.value = Array.from(iconElement.classList).join(" ");
-    let popupSection = document.querySelector('.icon-picker')
+    let popupSection = document.querySelector('.icon-picker-container')
     popupSection.classList.add('hidden');
   });
 });
