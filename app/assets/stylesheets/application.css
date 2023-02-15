@@ -269,6 +269,10 @@ input, select {
   padding: 20px;
 }
 
+.log-out-button {
+  color: white;
+}
+
 .hidden {
   display: none;
 }
