@@ -33,13 +33,12 @@
   padding: 0;
   box-sizing: border-box;
 
-  border: 1px solid blueviolet;
+  
 }
 
 body {
   font-family: var(--main-ff);
   background-color: #e6f1ff;
-  padding: 20px;
 }
 
 @media (min-width: 400px) {
@@ -68,7 +67,9 @@ select {
 
 a{
   text-decoration: none;
+  color: inherit;
 }
+
 .hidden {
   display: none;
 }
@@ -104,3 +105,60 @@ a{
   color: var(--main-color);
 }
 
+
+/* LOGIN FORM */
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.login-button {
+  margin-top: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.login-section > form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.header > * {
+  flex: 1;
+}
+
+.header > h2 {
+  text-align: center;
+}
+
+::placeholder {
+  color: #d1d1d1;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border:1px solid rgb(223, 220, 223);
+}
+
+.shared-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
