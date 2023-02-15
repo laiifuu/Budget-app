@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :entities
-  resources :groups, only: [:index, :show, :new, :create, :destroy] 
+  resources :entities, only: [:index, :show, :new, :create] 
+  resources :groups, only: [:index, :show, :new, :create] 
   resources :expenses
   resources :users
 
