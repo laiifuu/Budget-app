@@ -108,14 +108,14 @@ a{
 
 /* LOGIN FORM */
 
-.login-section {
+.login-section, .signup-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 
-.login-button {
+.login-button, .signup-button {
   margin-top: 20px;
   background-color: var(--secondary-color);
   color: white;
