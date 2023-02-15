@@ -13,6 +13,7 @@ class EntitiesController < ApplicationController
   def new
     @entity = Entity.new
     @groups = Group.all
+    @expense = @entity.expenses.build
   end
 
   # GET /entities/1/edit
@@ -21,7 +22,6 @@ class EntitiesController < ApplicationController
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
-    @expense = Expense.create(entity_id: @entity.id, group_id: expense_params)
 
     respond_to do |format|
       if @entity.save
@@ -66,10 +66,7 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:name, :author_id, :amount)
+    params.require(:entity).permit(:name, :author_id, :amount, expenses_attributes: [:group_id])
   end
 
-  def expense_params
-    params.permit(:group_id)
-  end
 end
