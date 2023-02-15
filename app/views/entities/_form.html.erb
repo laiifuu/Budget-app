@@ -25,11 +25,9 @@
     <%= form.number_field :amount %>
   </div>
 
-  <div>
-    <%= form.label :group_id, "Category", style: "display: block"%>
-    <%= form.collection_select :group_id, @groups.order(:name),:id,:name, include_blank: "--Choose Category--" %>
-  </div>
-
+  <%= form.fields_for :expenses do |expense_subform| %>
+    <%= expense_subform.collection_select :group_id, @groups.order(:name),:id,:name, include_blank: "--Choose Category--" %>
+    <% end %>
   <div>
     <%= form.submit %>
   </div>
