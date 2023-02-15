@@ -1,9 +1,11 @@
-<h1>New entity</h1>
+
+<section class="new-expense-section">
+<header class="header">
+<%= link_to "BACK", group_path(params[:current_group]) %>
+  <h2>New Expense</h2>
+  <div></div>
+</header>
 
 <%= render "form", entity: @entity %>
 
-<br>
-
-<div>
-  <%= link_to "Back to entities", entities_path %>
-</div>
+</section> 

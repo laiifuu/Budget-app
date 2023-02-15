@@ -21,7 +21,7 @@
   </ul>
 </div>
 
-<%= button_to "Add Transaction", new_entity_path, method: :get, class: "new-entity" %>
+<%= button_to "Add Transaction", new_entity_path, method: :get, class: "new-entity", params: {current_group: @group.id} %>
 
 
 </section>

@@ -110,14 +110,14 @@ button {
 
 /* LOGIN FORM */
 
-.login-section, .signup-section, .groups-section, .create-category-section, .expenses-section {
+.login-section, .signup-section, .groups-section, .create-category-section, .expenses-section, .new-expense-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 
-.login-button, .signup-button, .new-group, .create-group, .new-entity {
+.login-button, .signup-button, .new-group, .create-group, .new-entity, .create-expense {
   margin-top: 20px;
   background-color: var(--secondary-color);
   color: white;
@@ -150,10 +150,11 @@ button {
   color: #d1d1d1;
 }
 
-input {
+input, select {
   width: 100%;
   padding: 8px;
   border:1px solid rgb(223, 220, 223);
+  background-color: white;
 }
 
 .shared-links {
@@ -271,3 +272,4 @@ input {
 .hidden {
   display: none;
 }
+

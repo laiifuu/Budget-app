@@ -7,9 +7,6 @@ class EntitiesController < ApplicationController
     @entities = Entity.all
   end
 
-  # GET /entities/1 or /entities/1.json
-  def show; end
-
   # GET /entities/new
   def new
     @entity = Entity.new
@@ -17,33 +14,14 @@ class EntitiesController < ApplicationController
     @expense = @entity.expenses.build
   end
 
-  # GET /entities/1/edit
-  def edit; end
-
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
+        format.html { redirect_to group_path(@entity.expenses[0].group_id), notice: 'Entity was successfully created.' }
         format.json { render :show, status: :created, location: @entity }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /entities/1 or /entities/1.json
-  def update
-    respond_to do |format|
-      if @entity.update(entity_params)
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully updated.' }
-        format.json { render :show, status: :ok, location: @entity }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
       end
     end
   end
