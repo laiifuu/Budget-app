@@ -25,15 +25,13 @@
   /* font family */
 
   --main-ff: "Lato", sans-serif;
-  --splash-ff:  'Lobster', cursive;;
+  --splash-ff: 'Lobster', cursive;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  
 }
 
 body {
@@ -42,7 +40,7 @@ body {
 }
 
 @media (min-width: 400px) {
-  body{
+  body {
     width: 400px;
     margin: 0 auto 0 auto;
   }
@@ -65,7 +63,7 @@ select {
   font: inherit;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -89,7 +87,7 @@ button {
   font-family: var(--splash-ff);
 }
 
-.registration-links{
+.registration-links {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -110,20 +108,29 @@ button {
 
 /* LOGIN FORM */
 
-.login-section, .signup-section, .groups-section, .create-category-section, .expenses-section, .new-expense-section {
+.login-section,
+.signup-section,
+.groups-section,
+.create-category-section,
+.expenses-section,
+.new-expense-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-
-.login-button, .signup-button, .new-group, .create-group, .new-entity, .create-expense {
+.login-button,
+.signup-button,
+.new-group,
+.create-group,
+.new-entity,
+.create-expense {
   margin-top: 20px;
   background-color: var(--secondary-color);
   color: white;
 }
 
-.login-section > form{
+.login-section > form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -150,10 +157,11 @@ button {
   color: #d1d1d1;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 8px;
-  border:1px solid rgb(223, 220, 223);
+  border: 1px solid rgb(223, 220, 223);
   background-color: white;
 }
 
@@ -166,9 +174,10 @@ input, select {
   color: var(--text-color);
 }
 
-/* groups page */ 
+/* groups page */
 
-.group-item, .transaction-item {
+.group-item,
+.transaction-item {
   margin: 20px;
   display: flex;
   justify-content: space-between;
@@ -177,7 +186,8 @@ input, select {
   background-color: white;
 }
 
-.group-item > *, .transaction-item > * {
+.group-item > *,
+.transaction-item > * {
   flex: 1;
   text-align: center;
 }
@@ -201,7 +211,7 @@ input, select {
 }
 
 .select-icon-field > input {
-  flex:1;
+  flex: 1;
 }
 
 .select-icon-field > span {
@@ -250,7 +260,7 @@ input, select {
 }
 
 .icon {
-  border: 1px solid rgb(223, 220, 223) ;
+  border: 1px solid rgb(223, 220, 223);
   padding: 8px;
   flex: 1;
 }
@@ -265,7 +275,7 @@ input, select {
   width: 100%;
 }
 
-.expenses-section > form{
+.expenses-section > form {
   padding: 20px;
 }
 
@@ -276,4 +286,3 @@ input, select {
 .hidden {
   display: none;
 }
-
