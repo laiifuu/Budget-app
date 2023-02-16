@@ -1,0 +1,55 @@
+<%= form_with(model: group) do |form| %>
+  <% if group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, placeholder: "Name" %>
+  </div>
+
+  <div class="select-icon-field">
+    <%= form.text_field :icon, class: 'icon-input', placeholder: "Click on Select an Icon" %>
+    <span class="select-icon">Select an Icon</span>
+  </div>
+
+  <div>
+  <%= form.hidden_field :user_id, value: current_user.id  %>
+  </div>
+ 
+  <div>
+    <%= form.submit "Create Group", class: "create-group" %>
+  </div>
+<% end %>
+
+
+<div class="icon-picker-container hidden"> 
+
+  <div class="icon-picker">
+  <span class="close-icon-picker-btn"><i class="fa-solid fa-xmark fa-2x"></i></span>
+  <h1>Pick an Icon</h1>
+ 
+  <ul class="icons-list">
+    <li class="icon"><i class="fa-solid fa-utensils fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-cart-shopping fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-house fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-phone fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-paw fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-laptop fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-car fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-plane fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-file-invoice-dollar fa-2x"></i></li>
+    <li class="icon"><i class="fa-solid fa-shirt fa-2x"></i></li>
+
+  </ul>
+
+  </div>
+  
+</div>

@@ -1,0 +1,32 @@
+<section class="groups-section">
+
+<header class="header">
+<%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false},  class: "log-out-button" %>
+    
+  <h2>Categories</h2>
+  <div></div>
+</header>
+
+<p style="color: green"><%= notice %></p>
+
+
+
+
+  <ul class="groups-lis">
+  <% @groups.each do |group| %>
+    <% if can? :read, group %>
+    <li class="group-item">
+      <span><i class="<%= group.icon %> fa-3x"></i></span>
+      <p> <%= group.name %> </p>
+      <p> $<%= group.total_amount %></p>
+      <p>
+        <%= link_to "Show", group_path(group.id), class: "show-button" %>
+      </p>
+    </li>
+    <% end %>
+  <% end %>
+  </ul>
+
+<%= link_to "New Category", new_group_path, class: "new-group" %>
+
+</section>

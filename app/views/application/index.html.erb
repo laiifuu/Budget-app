@@ -1,0 +1,14 @@
+
+<% if !user_signed_in? %>
+<div class="splash-screen">
+<h1>SaveIT</h1>
+</div>
+<div class="registration-links">
+  <%= link_to "LOG IN", new_user_session_path, class: "btn" %>
+  <%= link_to "SIGN UP", new_user_registration_path, class: "btn btn-secondary" %>
+</div>
+<% else %>
+<script type="text/javascript">
+  window.location.href="/groups"  
+</script>
+<% end %>
