@@ -119,7 +119,8 @@ Give this project a ⭐️ if you like it !
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Shout out to the Ruby documentation :)
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+- Shout out to the Ruby and Rails documentation :)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
