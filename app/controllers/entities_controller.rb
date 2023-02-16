@@ -2,11 +2,6 @@ class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  # GET /entities or /entities.json
-  def index
-    @entities = Entity.all
-  end
-
   # GET /entities/new
   def new
     @entity = Entity.new
@@ -26,15 +21,6 @@ class EntitiesController < ApplicationController
     end
   end
 
-  # DELETE /entities/1 or /entities/1.json
-  def destroy
-    @entity.destroy
-
-    respond_to do |format|
-      format.html { redirect_to entities_url, notice: 'Entity was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
 
   private
 
