@@ -113,7 +113,8 @@ button {
 .groups-section,
 .create-category-section,
 .expenses-section,
-.new-expense-section {
+.new-expense-section,
+.forgot-password-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
