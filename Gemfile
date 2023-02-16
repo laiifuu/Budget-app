@@ -34,6 +34,8 @@ gem 'jbuilder'
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'factory_bot_rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -78,6 +80,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'devise-specs'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
