@@ -47,7 +47,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can view a live demo of this application via this [link](https://saveit-usxc.onrender.com/)
+A live link for this app is currently unavailable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
